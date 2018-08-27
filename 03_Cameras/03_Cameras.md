@@ -40,7 +40,7 @@
 	  * 진공관 vs. 센서 - https://blog.naver.com/jazz_mir/60038917792
   * Image Formation & Capture
     * Changing focal length allows us to move back and capture the scene
-	* ![Changing focal length](./Changing_focal_length.png)
+	* ![Changing focal length](./ChangingFocalLength.png)
 	* f가 18mm 일 때 보다 180mm 일 때 카메라와 객체 간의 실제 거리는 더 길지만, 화면상으로 큰 차이가 없게 느껴진다
 	* 두 객체 간의 거리는 f가 18mm 일 때 보다 180mm 일 때, 더 가깝게 느껴진다
   * Perspective Projection
@@ -48,4 +48,37 @@
 	* ![Camera model](./CameraModel.png)
 	* 영상이 inverted 되는 것을 고려해 영상의 투영면을 반대편에 가정
 ## 3. Exposure
+  * Exposure
+    * Irradiance x Time (H = E x T)
+	* Irradiance: Amout of light falling on a unit of sensor per sec. / Controlled by lens **aperture**
+	* Exposure Time: How long the **shutter** is kept open
+	* ![Inside a camera(an SLR)](./InsideaCamera.png)
+  * Shutter Speed
+    * Amount of time the sensor is exposed to light
+	* Usually denoted in fractions of a second (1/2000, 1/1000, ... , 1/15, ..., 15, 30, Bulb)
+  * Aperture
+    * Irradiance on sensor: The amout of light captured is proportional to the area of the aperture
+	* ![Aperture](./Aperture.png)
+	* f-number가 2배 ==> aperture 직경 0.5배 ... 들어오는 빛의 양은 0.25배
+	* 단, f-number ↑ ==> 사진의 depth of field(심도)는 깊어진다
+  * ISO
+    * Flim: 필름이 빛에 얼마나 민감하게 반응하는가(화학적 반응과 관련)
+	* Digital: 센서가 빛에 얼마나 민감하게 반응하는가(센서 자체의 민감도)
+	* ISO ↑ => Bright, Noise ↑
+	* ![Exposure triangle](./ExposureTriangle.png)
 ## 4. Sensor
+  * Photographic processes for digital and film capture
+    * Basically same
+	* Difference is how light is trapped and preserved
+	* Film - chemical, Digital - electronic
+  * 8 layers of color film
+    * ![Flim layers](./FilmLayers.png)
+  * 5 layers of a CCD
+    * ![Digital layers](./DigitalLayers.png)
+  * Differences between a CCD and CMOS sensor
+    * Photosites in CCD are passive and do ***no work***
+	* Photosites in CMOS are amplifiers and can do ***local processing*** => ***Rolling shutter*** artifact from local amplifier
+	* ![CCD vs. CMOS](./CCDvsCMOS.png)
+  * 2 benefits of using the camera raw format
+    * minimally processed, device-dependent
+	* dynamic range or color
