@@ -25,3 +25,20 @@
     * ![Example1](./Example1.png)
 	* ![Example2](./Example2.png)
 	* ![Example3](./Example3.png)
+	
+## 2. Blending
+  * Merging two images
+    * Cross-Fading
+	* ![Cross-Fading1](./CrossFading1.png)
+    * ![Cross-Fading2](./CrossFading2.png)
+	* ![Cross-Fading3](./CrossFading3.png)
+	* ![Cross-Fading_total](./CrossFadingTotal.png)
+  * Window sizes used for merging images
+    * To avoid seam: Window = size of <u>largest prominent</u> "feature"
+	* To avoid ghosting: Window <= 2x size of <u>smallest prominent</u> "feature"
+  * Advantages of a using the Fourier Domain
+    * Could be hepful for the right window size ... Largest frequency <= 2x size of smallest frequency
+	* Image frequency content should occupy one "octave"
+	* Feather: merge the right kinds of things from two different images ... "Blur" the edges before applying the blend operations
+	* ![Blur](./Blur.png)
+
