@@ -18,6 +18,35 @@
 	* (5) Find local maxima of response function(non-maximum suppression)
   * Harris Detector quiz - Harris_Detector_quiz.py
     * ![Harris corner octagon](./Figures/Harris_corner_octagon.png)
+  * Harris Detector: Step by Step
+    * (1) Compute **<u>Gaussian derivatives(Ix, Iy)</u>** at each pixel
+	* (2) Compute **<u>second moment matrix M</u>** in a Gaussian window around each pixel
+	* (3) Compute **<u>corner response function R</u>**
+	* (4) Threshold R
+	* (5) Find local maxima of response function(non-maximum suppression)
+  * Properties
+    * Rotation invariant
+	  * Ellipse rotates but its shape(i.e. eigenvalues) remains the same
+	  * Rotation is not same
+	  * ![Rotation invariant](./Figures/RotationInvariant.png)
+	  * Corner response **<u>R is invariant to image rotation)</u>**
+	* Intensity invariant
+	  * Invariance to intensity shift: I -> I + b
+	  * Invariance to intensity scale: I -> a * I
+	  * ![Intensity invariant](./Figures/IntensityInvariant.png)
+	* Scale invariant??? - NO!!!
+	  * ![Properties of Harris corner](./Figures/PropertiesOfHarris.png)
 
 ## SIFT
-  * 
+  * Scale Invariant Detection
+    * Consider **<u>regions(e.g. circles) of different sizes</u>** around a point
+	* Regions of corresponding sizes will look the same in both images
+	* How do we choose corresponding circles independently in each image? ==> Choose the scale of the "best " corner
+	* Compute **<u>the scale invariant function(f)</u>** over different size neighborhoods and Choose **<u>the scale(s1, s2 etc.) for each image</u>** where the function is a maximum
+	* ![Scale invariant detection](./Figures/ScaleInvariantDetection.png)
+  * Key point localization in space
+    * Find robust extremum(maximum or minimum) both in space and in scale
+      * Space: the image itself
+	  * Scale: the pyramid level
+    * Use pyramid to find maximum values, then eliminate edges and pick only corners
+      * Each point is compared to its **<u>8 neighbors in the current image</u>** and **<u>9 neighbors each in the scales above and below</u>**
