@@ -50,3 +50,15 @@
 	  * Scale: the pyramid level
     * Use pyramid to find maximum values, then eliminate edges and pick only corners
       * Each point is compared to its **<u>8 neighbors in the current image</u>** and **<u>9 neighbors each in the scales above and below</u>**
+  * Harris-Laplacian: Find local maximum of
+    * Harris corner detector in space
+	* Laplacian in scale
+	* ![Harris-Laplacian](./Figures/Harris-Laplacian.png)
+  * SIFT(Lowe, 2004): Find local maximum of
+    * Difference of Gaussians(DoG) in space and space
+	* DoG is simply a pyramid of the difference of Gaussians within each octave
+	* ![SIFT](./Figures/SIFT.png)
+  * SIFT main procedures
+    * Orientation assignment: Compute best orientation for each keypoint region
+	* Keypoint description: Use local image gradients at selected scale and rotation to describe each keypoint region
+  * Image content is transformed into local feature coordinates that are invariant to translation, rotation, scale, and other image parameters
