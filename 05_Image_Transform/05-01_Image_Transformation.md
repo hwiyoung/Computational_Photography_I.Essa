@@ -28,5 +28,19 @@
 	* Homogeneous coordinates is independent to scale, **<u>the parameter i can be 1 by dividing by i</u>**
 
 ## Affine/Projective Transformation
+  * Affine Transformation
+    * Combines linear transformations, translations
+	* Lines map to lines
+	* Parallel lines remain parallel
+	* Roations are preserved
+	* 6 DOF
+  * Projective Transformation
+    * Combines Affine transformations, Projective warps
+	* Lines map to lines
+    * **<u>Parallel lines do not necessarily remain parallel</u>**
+	* **<u>Rotaions are not preserved</u>**
+	* 8 DOF
+  * Recovering Transformation
+	* If recovering f(x, y) -> g(x', y'), how many points do we need? ==> The problem of DoF
 
 ## Degrees of Freedom for different transformation
