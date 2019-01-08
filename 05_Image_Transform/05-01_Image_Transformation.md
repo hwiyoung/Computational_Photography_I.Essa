@@ -2,7 +2,9 @@
 
 ## Transform the image
   * Image filtering: Change range of image ==> g(x) = T(f(x))
+    * Intensity values ... e.g.) made image much more whiter
   * Image warping: Change domain of image ==> g(x) = f(T(x))
+    * Size of the image ... # of rows, columns
   * Parametric Global Warping: Translation, Rotation, Aspect, Scale, Perspective, Affine
     * Transformation T is as a matrix transform
 	* p' = T p <=> p' = M p
