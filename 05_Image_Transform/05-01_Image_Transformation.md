@@ -44,3 +44,4 @@
 	* If recovering f(x, y) -> g(x', y'), how many points do we need? ==> The problem of DoF
 
 ## Degrees of Freedom for different transformation
+  * ![Degrees of Freedom](./Figures/DoF.png)
