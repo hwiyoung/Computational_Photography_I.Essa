@@ -27,7 +27,21 @@
 	* A: Usaually inverse ==> eliminates holes, However it requires an invertible warp function ==> not always possible
 
 ## Warping using a mesh
+  * Use a sparse set of corresponding points and interpolate with a displacement field
+    * Triangulate the set of poins on source
+	* Use the affine model for each triangle
+	* Triangulate target with displaced points
+	* Use inverse mapping
+  * ![WarpingUsingMesh](./Figures/WarpingUsingMesh.png)
 
 ## Image Morphing
+  * Quadrilateral mesh displaced with variational interpolation
+  * ![QuadrilateralMesh](./Figures/QuadrilateralMesh.png)
+  * Corresponding features/points
+  * ![FeaturesPoints](./Figures/FeaturesPoints.png)
+  * Corresponding orientated line segments(sepcifies translation, rotation, scaling)
+  * ![OrientatedLines](./Figures/OrientatedLines.png)
 	
 ## Feature-based Image Morphing
+  * Doing the morphing using features(eyeball, lips, etc.)
+  * ![MorphingUsingFeatures](./Figures/MorphingUsingFeatures.png)
